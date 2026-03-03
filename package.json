@@ -12,6 +12,7 @@
     "node": ">=18.x"
   },
   "dependencies": {
+    "@astrojs/cloudflare": "^12.6.12",
     "@astrojs/tailwind": "^6.0.2",
     "@fontsource/noto-sans-jp": "^5.2.5",
     "@tailwindcss/typography": "^0.5.16",
@@ -23,6 +24,7 @@
   },
   "devDependencies": {
     "prettier": "^3.5.3",
-    "prettier-plugin-astro": "^0.14.1"
+    "prettier-plugin-astro": "^0.14.1",
+    "wrangler": "^4.69.0"
   }
 }
