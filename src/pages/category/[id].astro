@@ -1,10 +1,10 @@
 ---
-import { getCategoryList, getBlogList } from "@libs/microcms.ts";
+import { getCategoryList, getBlogList } from "@libs/microcms";
 import Layout from "@layouts/Layout.astro";
 import BlogList from "@components/BlogList.astro";
 import Pagination from "@components/Pagination.astro";
 import CategoryList from "@components/CategoryList.astro";
-import { LIMIT } from "@constants/index.ts";
+import { LIMIT } from "@constants/index";
 export const prerender = true;
 
 export async function getStaticPaths() {
@@ -28,14 +28,14 @@ const { contents: blogs, totalCount } = category
   : { contents: [], totalCount: 0 };
 
 const Meta = {
-  title: category ? `${category.name} の記事一覧` : "カテゴリが見つかりません",
+  title: category ? `${category.category} の記事一覧` : "カテゴリが見つかりません",
 };
 ---
 
 <Layout Meta={Meta}>
   <div class="space-y-8">
     <h1 class="text-xl font-medium mb-6">
-      {category ? `${category.name} の記事一覧` : "カテゴリが見つかりません"}
+      {category ? `${category.category} の記事一覧` : "カテゴリが見つかりません"}
     </h1>
 
     {

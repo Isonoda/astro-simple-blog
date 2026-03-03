@@ -19,7 +19,7 @@ export type Blog = {
 } & MicroCMSListContent;
 
 export type Category = {
-  name: string;
+  category: string;
 } & MicroCMSListContent;
 
 export interface Settings {
@@ -35,7 +35,7 @@ const DEFAULT_SETTINGS: Settings = {
 };
 
 export const getBlogList = async (queries?: MicroCMSQueries) => {
-  return await client.getList<Blog>({ endpoint: "blog", queries });
+  return await client.getList<Blog>({ endpoint: "blogs", queries });
 };
 
 export const getBlogDetail = async (
@@ -43,7 +43,7 @@ export const getBlogDetail = async (
   queries?: MicroCMSQueries
 ) => {
   return await client.getListDetail<Blog>({
-    endpoint: "blog",
+    endpoint: "blogs",
     contentId,
     queries,
   });

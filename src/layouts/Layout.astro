@@ -2,7 +2,7 @@
 // src/layouts/Layout.astro
 import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
-import { getSettings } from "@libs/microcms.ts";
+import { getSettings } from "@libs/microcms";
 import "@styles/global.css";
 const settings = await getSettings();
 const siteTitle = settings.title;

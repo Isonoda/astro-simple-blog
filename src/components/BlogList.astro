@@ -33,7 +33,7 @@ const { blogs }: Props = Astro.props;
           <p class="mb-2">
             <Date date={blog.publishedAt || blog.createdAt} />
           </p>
-          {blog.description && <p class="text-sm">{blog.description}</p>}
+          {blog.description && <p class="text-sm" set:html={blog.description} />}
         </a>
       ))}
     </div>
